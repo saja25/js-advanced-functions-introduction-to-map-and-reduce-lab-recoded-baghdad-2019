@@ -30,3 +30,24 @@ function mapToSquare(arr) {
   }
   return newArr
 }
+function reduceToTotal(arr, startingPoint=0) {
+  let sum = startingPoint
+  for (let i = 0; i < arr.length; i++ ) {
+    sum = sum + arr[i]
+  }
+  return sum
+}
+
+function reduceToAllTrue(arr) {
+  for (let i = 0; i < arr.length; i++ ) {
+    if (!arr[i]) return false
+  }
+  return true
+}
+
+function reduceToAnyTrue(arr) {
+  for (let i = 0; i < arr.length; i++ ) {
+    if (arr[i]) return true
+  }
+  return false
+}
